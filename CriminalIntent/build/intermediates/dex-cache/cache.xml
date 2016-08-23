@@ -12,7 +12,7 @@
         jar="D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         revision="23.0.3"
-        sha1="3d8ea1e7420f9c923ed0c550fe0116da95232c9e">
+        sha1="5cd27b363be7a2de3a69757f4f89548041d7b82a">
         <dex dex="D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_9ed54bddc24755fbcd674b7dbf0e75d680348ccd\classes.dex" />
     </item>
     <item
@@ -26,7 +26,7 @@
         jar="D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         revision="23.0.3"
-        sha1="b947c8d36b7e17bb1e40978ef6cec484498d6708">
+        sha1="d2b2d0588c90c67355d635af27d666458b21bf58">
         <dex dex="D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_956f008d2bac78f87204c2a4bd0b2f7195791d26\classes.dex" />
     </item>
     <item

@@ -32,12 +32,12 @@
         "source": "D:\\Wanbenyu\\AndroidStudioProjects\\CriminalIntent\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\color\\switch_thumb_material_light.xml"
     },
     {
-        "merged": "D:\\Wanbenyu\\AndroidStudioProjects\\CriminalIntent\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_background_cache_hint_selector_material_dark.xml",
-        "source": "D:\\Wanbenyu\\AndroidStudioProjects\\CriminalIntent\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\color\\abc_background_cache_hint_selector_material_dark.xml"
-    },
-    {
         "merged": "D:\\Wanbenyu\\AndroidStudioProjects\\CriminalIntent\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_secondary_text_material_dark.xml",
         "source": "D:\\Wanbenyu\\AndroidStudioProjects\\CriminalIntent\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\color\\abc_secondary_text_material_dark.xml"
+    },
+    {
+        "merged": "D:\\Wanbenyu\\AndroidStudioProjects\\CriminalIntent\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_background_cache_hint_selector_material_dark.xml",
+        "source": "D:\\Wanbenyu\\AndroidStudioProjects\\CriminalIntent\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\color\\abc_background_cache_hint_selector_material_dark.xml"
     },
     {
         "merged": "D:\\Wanbenyu\\AndroidStudioProjects\\CriminalIntent\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_secondary_text_material_light.xml",
