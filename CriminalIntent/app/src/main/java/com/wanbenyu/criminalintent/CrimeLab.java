@@ -38,8 +38,12 @@ public class CrimeLab {
         return sCrimeLab;
     }
 
-    public void addCrime(Crime c){
+    public void addCrime(Crime c) {
         mCrimes.add(c);
+    }
+
+    public void deleteCrime(Crime c) {
+        mCrimes.remove(c);
     }
 
     public ArrayList<Crime> getCrimes(){
