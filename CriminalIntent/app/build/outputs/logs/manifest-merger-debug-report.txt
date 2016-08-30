@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:2:1-24:12
+ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:2:1-33:12
 	package
 		ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:3:11-48
 		INJECTED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml
@@ -13,8 +13,16 @@ ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\Android
 	android:versionCode
 		INJECTED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml
 		INJECTED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.CAMERA
+ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:5:5-64
+	android:name
+		ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:5:22-62
+uses-feature#android.hardware.camera
+ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:6:5-59
+	android:name
+		ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:6:19-57
 application
-ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:5:5-22:19
+ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:8:5-31:19
 MERGED from [com.android.support:appcompat-v7:23.3.0] D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-vector-drawable:23.3.0] D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
 MERGED from [com.android.support:support-v4:23.3.0] D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
@@ -23,41 +31,49 @@ MERGED from [com.android.support:support-vector-drawable:23.3.0] D:\Wanbenyu\And
 MERGED from [com.android.support:support-v4:23.3.0] D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.3.0] D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
 	android:label
-		ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:8:9-41
+		ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:11:9-41
 	android:supportsRtl
-		ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:9:9-35
+		ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:12:9-35
 	android:allowBackup
-		ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:6:9-35
+		ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:9:9-35
 	android:icon
-		ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:7:9-43
+		ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:10:9-43
 	android:theme
-		ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:10:9-40
+		ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:13:9-40
 activity#com.wanbenyu.criminalintent.CrimeListActivity
-ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:11:9-16:20
+ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:15:9-20:20
 	android:name
-		ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:11:19-52
+		ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:15:19-52
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:12:13-15:29
+ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:16:13-19:29
 action#android.intent.action.MAIN
-ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:13:17-68
+ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:17:17-68
 	android:name
-		ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:13:25-66
+		ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:17:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:14:17-76
+ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:18:17-76
 	android:name
-		ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:14:27-74
+		ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:18:27-74
 activity#com.wanbenyu.criminalintent.CrimePagerActivity
-ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:17:9-21:20
+ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:21:9-25:20
 	android:label
-		ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:18:13-45
+		ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:22:13-45
 	android:name
-		ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:17:19-53
+		ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:21:19-53
 meta-data#android.support.PARENT_ACTIVITY
-ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:19:13-20:60
+ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:23:13-24:60
 	android:value
-		ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:20:24-58
+		ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:24:24-58
 	android:name
-		ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:19:24-70
+		ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:23:24-70
+activity#com.wanbenyu.criminalintent.CrimeCameraActivity
+ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:26:9-29:20
+	android:screenOrientation
+		ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:27:19-56
+	android:label
+		ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:28:19-51
+	android:name
+		ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:26:19-54
 uses-sdk
 INJECTED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:23.3.0] D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:21:5-23:78

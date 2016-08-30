@@ -13,4 +13,5 @@
     <string name="delete_crime">Delete</string>
     <string name="empty_hint">没有数据</string>
     <string name="new_crime_button">创建</string>
+    <string name="take">Take!</string>
 </resources>

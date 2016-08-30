@@ -102,7 +102,7 @@ public class CrimeListFragment extends ListFragment {
                 @Override
                 public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
                     switch (item.getItemId()){
-                        case R.id.menu_iteme_delete_crime:
+                        case R.id.menu_item_delete_crime:
                             CrimeAdapter adapter = (CrimeAdapter)getListAdapter();
                             CrimeLab crimelab = CrimeLab.get(getActivity());
                             for(int i = adapter.getCount() - 1; i >= 0; i--){
@@ -186,7 +186,7 @@ public class CrimeListFragment extends ListFragment {
         Crime crime = adapter.getItem(position);
 
         switch (item.getItemId()) {
-            case R.id.menu_iteme_delete_crime:
+            case R.id.menu_item_delete_crime:
                 CrimeLab.get(getActivity()).deleteCrime(crime);
                 adapter.notifyDataSetChanged();
                 return true;

@@ -12,12 +12,12 @@
         "source": "D:\\Wanbenyu\\AndroidStudioProjects\\CriminalIntent\\app\\src\\main\\res\\layout\\list_item_crime.xml"
     },
     {
-        "merged": "D:\\Wanbenyu\\AndroidStudioProjects\\CriminalIntent\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
-        "source": "D:\\Wanbenyu\\AndroidStudioProjects\\CriminalIntent\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_list_menu_item_layout.xml"
-    },
-    {
         "merged": "D:\\Wanbenyu\\AndroidStudioProjects\\CriminalIntent\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
         "source": "D:\\Wanbenyu\\AndroidStudioProjects\\CriminalIntent\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "D:\\Wanbenyu\\AndroidStudioProjects\\CriminalIntent\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
+        "source": "D:\\Wanbenyu\\AndroidStudioProjects\\CriminalIntent\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_list_menu_item_layout.xml"
     },
     {
         "merged": "D:\\Wanbenyu\\AndroidStudioProjects\\CriminalIntent\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_crime.xml",
@@ -152,12 +152,16 @@
         "source": "D:\\Wanbenyu\\AndroidStudioProjects\\CriminalIntent\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_list_menu_item_checkbox.xml"
     },
     {
-        "merged": "D:\\Wanbenyu\\AndroidStudioProjects\\CriminalIntent\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
-        "source": "D:\\Wanbenyu\\AndroidStudioProjects\\CriminalIntent\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_screen_simple.xml"
+        "merged": "D:\\Wanbenyu\\AndroidStudioProjects\\CriminalIntent\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_crime_camera.xml",
+        "source": "D:\\Wanbenyu\\AndroidStudioProjects\\CriminalIntent\\app\\src\\main\\res\\layout\\fragment_crime_camera.xml"
     },
     {
         "merged": "D:\\Wanbenyu\\AndroidStudioProjects\\CriminalIntent\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
         "source": "D:\\Wanbenyu\\AndroidStudioProjects\\CriminalIntent\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "D:\\Wanbenyu\\AndroidStudioProjects\\CriminalIntent\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
+        "source": "D:\\Wanbenyu\\AndroidStudioProjects\\CriminalIntent\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_screen_simple.xml"
     },
     {
         "merged": "D:\\Wanbenyu\\AndroidStudioProjects\\CriminalIntent\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",

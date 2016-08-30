@@ -102,5 +102,9 @@
     {
         "merged": "D:\\Wanbenyu\\AndroidStudioProjects\\CriminalIntent\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
         "source": "D:\\Wanbenyu\\AndroidStudioProjects\\CriminalIntent\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "D:\\Wanbenyu\\AndroidStudioProjects\\CriminalIntent\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\background_activated.xml",
+        "source": "D:\\Wanbenyu\\AndroidStudioProjects\\CriminalIntent\\app\\src\\main\\res\\drawable\\background_activated.xml"
     }
 ]
