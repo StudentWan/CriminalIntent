@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import java.io.IOException;
+import java.util.List;
 
 /**
  * Created by 本钰 on 2016/8/29.
@@ -42,7 +43,7 @@ public class CrimeCameraFragment extends Fragment {
         //setType() and SURFACE_TYPE_PUSH_BUFFERS are both deprecated
         //but are required fo Camera preview to work on pre-3.0 devices
         holder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
-
+        Log.d(TAG, "2");
         holder.addCallback(new SurfaceHolder.Callback() {
 
             public void surfaceCreated(SurfaceHolder holder){
@@ -50,6 +51,7 @@ public class CrimeCameraFragment extends Fragment {
                 try {
                     if(mCamera != null) {
                         mCamera.setPreviewDisplay(holder);
+                        Log.d(TAG, "3");
                     }
                 } catch (IOException exception) {
                     Log.e(TAG, "Error setting up preview display", exception);
@@ -63,11 +65,13 @@ public class CrimeCameraFragment extends Fragment {
                 }
             }
 
-            public void surfaceChanged(SurfaceHolder holder, int format, int w, int h){
+            public void surfaceChanged(SurfaceHolder holder, int format, int w, int h) {
                 if(mCamera == null) return;
                 //The surface has changed size; update the camera preview size
                 Camera.Parameters parameters = mCamera.getParameters();
-                Camera.Size s = null;//To be reset in the next section
+                Log.d(TAG, "4");
+                Camera.Size s = getBestSupportedSize(parameters.getSupportedPreviewSizes(), w, h);
+                Log.d(TAG, "5");
                 parameters.setPreviewSize(s.width, s.height);
                 mCamera.setParameters(parameters);
                 try {
@@ -80,19 +84,34 @@ public class CrimeCameraFragment extends Fragment {
             }
 
         });
-
         return v;
+    }
+
+    /** A simple algorithm to get the largest size available. For a more
+     * robust version, see CameraPreview.java in the ApiDemos
+     * sample app for Android.
+     */
+    private Camera.Size getBestSupportedSize(List<Camera.Size> sizes, int width, int height) {
+       //唯一可能的理解是sizes.get(0)获得了以width和height为宽高的像素尺寸
+        Camera.Size bestSize = sizes.get(0);
+        int largestArea = bestSize.width * bestSize.height;
+        for(Camera.Size s : sizes) {
+            int area = s.width * s.height;
+            if(area > largestArea) {
+                bestSize = s;
+                largestArea = area;
+            }
+        }
+        return bestSize;
     }
 
     @TargetApi(9)
     @Override
     public void onResume(){
         super.onResume();
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.GINGERBREAD) {
-            mCamera = Camera.open(0);
-        } else {
-            mCamera = Camera.open();
-        }
+        mCamera = Camera.open();
+        Log.d(TAG, "1");
+
     }
 
     @Override

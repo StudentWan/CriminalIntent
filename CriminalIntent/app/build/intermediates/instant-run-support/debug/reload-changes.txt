@@ -1,2 +1,2 @@
 CHANGED,D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class
-CHANGED,D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\wanbenyu\criminalintent\CrimeFragment$override.class
+CHANGED,D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\wanbenyu\criminalintent\CrimeCameraFragment$override.class
