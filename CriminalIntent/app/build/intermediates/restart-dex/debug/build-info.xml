@@ -1,38 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="x86"
+    abi="arm64-v8a,armeabi-v7a,armeabi"
     api-level="23"
-    density="560dpi"
+    density="420dpi"
     format="7"
-    timestamp="4690722563282"
-    token="868887892844226797" >
+    timestamp="9133142467628"
+    token="868887892844226797"
+    verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="658" />
+        duration="422" />
     <task
         name="instant-run-dex"
-        duration="0" />
+        duration="397" />
     <task
         name="instant-run-transform"
-        duration="59" />
+        duration="35" />
     <task
         name="verifier"
         duration="2" />
 
     <artifact
-        location="D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_9\classes.dex"
-        type="DEX" />
+        location="D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\build\intermediates\reload-dex\debug\classes.dex"
+        type="RELOAD_DEX" />
 
-    <build timestamp="3477346414548" >
+    <build timestamp="4698519861985" >
         <artifact
             location="D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
-    <build timestamp="4690722563282" >
+    <build
+        timestamp="7695600684905"
+        verifier="METHOD_DELETED" >
         <artifact
             location="D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_9\classes.dex"
             type="DEX" />
+    </build>
+    <build
+        timestamp="7724878678732"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\build\intermediates\builds\debug\7724878678732\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="9133142467628"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\build\intermediates\reload-dex\debug\classes.dex"
+            type="RELOAD_DEX" />
     </build>
 
 </instant-run>

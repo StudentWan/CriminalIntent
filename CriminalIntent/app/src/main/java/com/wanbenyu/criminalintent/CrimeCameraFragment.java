@@ -1,20 +1,27 @@
 package com.wanbenyu.criminalintent;
 
 import android.annotation.TargetApi;
+import android.content.Context;
 import android.hardware.Camera;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
+import android.view.Display;
 import android.view.LayoutInflater;
+import android.view.Surface;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.Button;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
+import java.util.UUID;
 
 /**
  * Created by 本钰 on 2016/8/29.
@@ -24,17 +31,58 @@ public class CrimeCameraFragment extends Fragment {
 
     private Camera mCamera;
     private SurfaceView mSurfaceView;
+    private View mProgressContainer;
 
-    @Override
-    @SuppressWarnings("deprecation")
+    private Camera.ShutterCallback mShutterCallback = new Camera.ShutterCallback() {
+        public void onShutter() {
+            //Display the progress indicator
+            mProgressContainer.setVisibility(View.VISIBLE);
+        }
+    };
+
+    private Camera.PictureCallback mJpegCallback = new Camera.PictureCallback() {
+      public void onPictureTaken(byte[] data, Camera camera) {
+          //Create a filename
+          String filename = UUID.randomUUID().toString() + ".jpg";
+          //Save the jpeg data to disk
+          FileOutputStream os = null;
+          boolean success = true;
+
+          try {
+              os = getActivity().openFileOutput(filename, Context.MODE_PRIVATE);
+              os.write(data);
+          } catch (Exception e) {
+              Log.e(TAG, "Error writing to file " + filename, e);
+              success = false;
+          } finally {
+              try {
+                  if(os != null) os.close();
+              } catch (Exception e) {
+                  Log.e(TAG, "Error closing file" + filename, e);
+                  success = false;
+              }
+          }
+
+          if(success) {
+              Log.i(TAG, "JPEG saved at " + filename);
+          }
+          getActivity().finish();
+      }
+    };
+
     public View onCreateView(LayoutInflater inflater, ViewGroup parent,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_crime_camera, parent, false);
 
+        mProgressContainer = v.findViewById(R.id.crime_camera_progressContainer);
+        mProgressContainer.setVisibility(View.INVISIBLE);
+
         Button takePictureButton = (Button)v.findViewById(R.id.crime_camera_takePictureButton);
         takePictureButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                getActivity().finish();
+                if(mCamera != null) {
+                    mCamera.takePicture(mShutterCallback, null, mJpegCallback);
+                }
             }
         });
 
@@ -69,11 +117,15 @@ public class CrimeCameraFragment extends Fragment {
                 if(mCamera == null) return;
                 //The surface has changed size; update the camera preview size
                 Camera.Parameters parameters = mCamera.getParameters();
-                Log.d(TAG, "4");
                 Camera.Size s = getBestSupportedSize(parameters.getSupportedPreviewSizes(), w, h);
-                Log.d(TAG, "5");
                 parameters.setPreviewSize(s.width, s.height);
+                s = getBestSupportedSize(parameters.getSupportedPictureSizes(), w, h);
+                parameters.setPictureSize(s.width, s.height);
                 mCamera.setParameters(parameters);
+                if (Build.MODEL.equals("Nexus 5X")){
+                    // rotate camera 180°
+                    mCamera.setDisplayOrientation(180);
+                }
                 try {
                     mCamera.startPreview();
                 } catch (Exception e) {
@@ -109,9 +161,7 @@ public class CrimeCameraFragment extends Fragment {
     @Override
     public void onResume(){
         super.onResume();
-        mCamera = Camera.open();
-        Log.d(TAG, "1");
-
+            mCamera = Camera.open();
     }
 
     @Override

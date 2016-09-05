@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:2:1-33:12
+ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:2:1-34:12
 	package
 		ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:3:11-48
 		INJECTED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml
@@ -14,7 +14,7 @@ ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\Android
 		INJECTED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml
 		INJECTED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml
 application
-ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:5:5-28:19
+ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:5:5-29:19
 MERGED from [com.android.support:appcompat-v7:23.3.0] D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-vector-drawable:23.3.0] D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
 MERGED from [com.android.support:support-v4:23.3.0] D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
@@ -59,21 +59,23 @@ ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\Android
 	android:name
 		ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:20:24-70
 activity#com.wanbenyu.criminalintent.CrimeCameraActivity
-ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:23:9-26:20
+ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:23:9-27:20
 	android:screenOrientation
-		ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:24:19-56
+		ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:25:19-56
 	android:label
-		ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:25:19-51
+		ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:26:19-51
+	android:exported
+		ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:24:19-42
 	android:name
 		ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:23:19-54
 uses-permission#android.permission.CAMERA
-ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:30:5-64
+ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:31:5-64
 	android:name
-		ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:30:22-62
+		ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:31:22-62
 uses-feature#android.hardware.camera
-ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:31:5-59
+ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:32:5-59
 	android:name
-		ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:31:19-57
+		ADDED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:32:19-57
 uses-sdk
 INJECTED from D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:23.3.0] D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:21:5-23:78
