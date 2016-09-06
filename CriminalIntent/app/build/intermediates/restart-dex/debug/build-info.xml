@@ -4,52 +4,48 @@
     api-level="23"
     density="420dpi"
     format="7"
-    timestamp="9133142467628"
-    token="868887892844226797"
-    verifier="COMPATIBLE" >
+    timestamp="7328076309706"
+    token="868887892844226797" >
 
     <task
         name="javac"
-        duration="422" />
+        duration="465" />
     <task
         name="instant-run-dex"
-        duration="397" />
+        duration="0" />
     <task
         name="instant-run-transform"
-        duration="35" />
+        duration="115" />
     <task
         name="verifier"
-        duration="2" />
+        duration="11" />
 
     <artifact
-        location="D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\build\intermediates\reload-dex\debug\classes.dex"
-        type="RELOAD_DEX" />
+        location="D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_9\classes.dex"
+        type="DEX" />
 
-    <build timestamp="4698519861985" >
+    <build timestamp="2816756422139" >
         <artifact
             location="D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
-    <build
-        timestamp="7695600684905"
-        verifier="METHOD_DELETED" >
+    <build timestamp="3287887882105" >
+        <artifact
+            location="D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\build\intermediates\res\resources-debug.ap_"
+            type="RESOURCES" />
+        <artifact
+            location="D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
+            type="DEX" />
+    </build>
+    <build timestamp="7328076309706" >
         <artifact
             location="D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_9\classes.dex"
             type="DEX" />
     </build>
-    <build
-        timestamp="7724878678732"
-        verifier="COMPATIBLE" >
+    <build timestamp="24032795480301" >
         <artifact
-            location="D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\build\intermediates\builds\debug\7724878678732\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        timestamp="9133142467628"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\build\intermediates\reload-dex\debug\classes.dex"
-            type="RELOAD_DEX" />
+            location="D:\Wanbenyu\AndroidStudioProjects\CriminalIntent\app\build\outputs\apk\app-debug.apk"
+            type="MAIN" />
     </build>
 
 </instant-run>
