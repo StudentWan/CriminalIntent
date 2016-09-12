@@ -1,10 +1,14 @@
 [
     {
-        "merged": "D:\\Wanbenyu\\AndroidStudioProjects\\CriminalIntent\\app\\build\\intermediates\\res\\merged\\debug\\menu\\fragment_crime_list.xml",
-        "source": "D:\\Wanbenyu\\AndroidStudioProjects\\CriminalIntent\\app\\src\\main\\res\\menu\\fragment_crime_list.xml"
+        "merged": "G:\\AndroidBackup\\CriminalIntent\\app\\build\\intermediates\\res\\merged\\debug\\menu\\fragment_crime_list.xml",
+        "source": "G:\\AndroidBackup\\CriminalIntent\\app\\src\\main\\res\\menu\\fragment_crime_list.xml"
     },
     {
-        "merged": "D:\\Wanbenyu\\AndroidStudioProjects\\CriminalIntent\\app\\build\\intermediates\\res\\merged\\debug\\menu\\crime_list_item_context.xml",
-        "source": "D:\\Wanbenyu\\AndroidStudioProjects\\CriminalIntent\\app\\src\\main\\res\\menu\\crime_list_item_context.xml"
+        "merged": "G:\\AndroidBackup\\CriminalIntent\\app\\build\\intermediates\\res\\merged\\debug\\menu\\crime_list_item_context.xml",
+        "source": "G:\\AndroidBackup\\CriminalIntent\\app\\src\\main\\res\\menu\\crime_list_item_context.xml"
+    },
+    {
+        "merged": "G:\\AndroidBackup\\CriminalIntent\\app\\build\\intermediates\\res\\merged\\debug\\menu\\photo_item_context.xml",
+        "source": "G:\\AndroidBackup\\CriminalIntent\\app\\src\\main\\res\\menu\\photo_item_context.xml"
     }
 ]

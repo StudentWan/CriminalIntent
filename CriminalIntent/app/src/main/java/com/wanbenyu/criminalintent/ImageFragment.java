@@ -14,12 +14,15 @@ import android.widget.ImageView;
 public class ImageFragment extends DialogFragment {
     public static final String EXTRA_IMAGE_PATH =
             "com.wanbenyu.criminalintent.image_path";
+    public static final String EXTRA_IMAGE_ORIENTATION =
+            "com.wanbenyu.crinimalintent.image_orientation";
 
     private ImageView mImageView;
 
-    public static ImageFragment newInstance (String imagePath) {
+    public static ImageFragment newInstance (String imagePath, int orientation) {
         Bundle args = new Bundle();
         args.putSerializable(EXTRA_IMAGE_PATH, imagePath);
+        args.putSerializable(EXTRA_IMAGE_ORIENTATION, orientation);
 
         ImageFragment fragment = new ImageFragment();
         fragment.setArguments(args);
@@ -33,7 +36,8 @@ public class ImageFragment extends DialogFragment {
                              ViewGroup parent, Bundle savedInstanceState) {
         mImageView = new ImageView(getActivity());
         String path = (String)getArguments().getSerializable(EXTRA_IMAGE_PATH);
-        BitmapDrawable image = PictureUtils.getScaledDrawable(getActivity(), path);
+        int orientation = (int)getArguments().getSerializable(EXTRA_IMAGE_ORIENTATION);
+        BitmapDrawable image = PictureUtils.getScaledDrawable(getActivity(), path, orientation);
         mImageView.setImageDrawable(image);
 
         return mImageView;

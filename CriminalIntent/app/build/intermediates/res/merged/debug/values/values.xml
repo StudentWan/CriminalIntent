@@ -222,6 +222,7 @@
     <string name="crimes_title">Crimes</string>
     <string name="date_picker_title">Date of crime:</string>
     <string name="delete_crime">Delete</string>
+    <string name="delete_photo">Delete Photo</string>
     <string name="empty_hint">没有数据</string>
     <string name="hide_subtitle">Hide Subtitle</string>
     <string name="new_crime">New Crime</string>

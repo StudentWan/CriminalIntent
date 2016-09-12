@@ -4,13 +4,17 @@ import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.hardware.Camera;
+import android.hardware.SensorManager;
+import android.media.ExifInterface;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.Display;
 import android.view.LayoutInflater;
+import android.view.OrientationEventListener;
 import android.view.Surface;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
@@ -28,15 +32,33 @@ import java.util.UUID;
 /**
  * Created by 本钰 on 2016/8/29.
  */
+
+
+
 public class CrimeCameraFragment extends Fragment {
     private static final String TAG = "CrimeCameraFragment";
 
     public static final String EXTRA_PHOTO_FILENAME =
             "com.wanbenyu.criminalintent.photo_filename";
+    public static final String EXTRA_PHOTO_ORIENTAION =
+            "com.wanbenyu.criminalintent.photo_orientation";
 
     private Camera mCamera;
     private SurfaceView mSurfaceView;
     private View mProgressContainer;
+
+    MyOrientationEventListener myOrientationEventListener;
+
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        myOrientationEventListener =
+                new MyOrientationEventListener(getActivity(), SensorManager.SENSOR_DELAY_NORMAL);
+
+        if (myOrientationEventListener.canDetectOrientation()){
+            myOrientationEventListener.enable();
+        }
+    }
 
     private Camera.ShutterCallback mShutterCallback = new Camera.ShutterCallback() {
         public void onShutter() {
@@ -71,6 +93,7 @@ public class CrimeCameraFragment extends Fragment {
           if(success) {
               Intent i = new Intent();
               i.putExtra(EXTRA_PHOTO_FILENAME, filename);
+              i.putExtra(EXTRA_PHOTO_ORIENTAION, myOrientationEventListener.getOrientation());
               getActivity().setResult(Activity.RESULT_OK, i);
           } else {
               getActivity().setResult(Activity.RESULT_CANCELED);
@@ -166,6 +189,7 @@ public class CrimeCameraFragment extends Fragment {
         return bestSize;
     }
 
+
     @TargetApi(9)
     @Override
     public void onResume(){
@@ -181,5 +205,12 @@ public class CrimeCameraFragment extends Fragment {
             mCamera.release();
             mCamera = null;
         }
+    }
+
+    @Override
+    public void onDestroy() {
+        // TODO Auto-generated method stub
+        super.onDestroy();
+        myOrientationEventListener.disable();
     }
 }

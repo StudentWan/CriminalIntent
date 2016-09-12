@@ -3,7 +3,9 @@ package com.wanbenyu.criminalintent;
 import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
 import android.graphics.drawable.BitmapDrawable;
+import android.util.Log;
 import android.view.Display;
 import android.widget.ImageView;
 
@@ -15,8 +17,11 @@ public class PictureUtils {
      * Get a BitmapDrawable from a local file that is scaled down
      * to fit the current window size.
      */
+
+    private static final String TAG = "PictureUtils";
+
     @SuppressWarnings("deprecation")
-    public static BitmapDrawable getScaledDrawable(Activity a, String path) {
+    public static BitmapDrawable getScaledDrawable(Activity a, String path, int orientation) {
         Display display = a.getWindowManager().getDefaultDisplay();
         float destWidth = display.getWidth();
         float destHeight = display.getHeight();
@@ -42,7 +47,37 @@ public class PictureUtils {
         options.inSampleSize = inSampleSize;
 
         Bitmap bitmap = BitmapFactory.decodeFile(path, options);
-        return new BitmapDrawable(a.getResources(), bitmap);
+        //Log.d(TAG,String.valueOf(orientation));
+        /**Matrix matrix = new Matrix();
+        matrix.preScale(1,1);
+        matrix.postRotate(90);
+        Bitmap resizedBitmap = Bitmap.createBitmap(bitmap, 0, 0,
+                bitmap.getWidth(), bitmap.getHeight(), matrix, true);*/
+        Bitmap resizedBitmap = null;
+        Matrix matrix = new Matrix();
+        if(orientation == 0) {
+            matrix.preScale(1,1);
+            matrix.postRotate(0);
+            resizedBitmap = Bitmap.createBitmap(bitmap, 0, 0,
+                    bitmap.getWidth(), bitmap.getHeight(), matrix, true);
+        } else if (orientation == 8) {
+            matrix.preScale(1,1);
+            matrix.postRotate(180);
+            resizedBitmap = Bitmap.createBitmap(bitmap, 0, 0,
+                    bitmap.getWidth(), bitmap.getHeight(), matrix, true);
+        } else if (orientation == 1) {
+            matrix.preScale(1,1);
+            matrix.postRotate(90);
+            resizedBitmap = Bitmap.createBitmap(bitmap, 0, 0,
+                    bitmap.getWidth(), bitmap.getHeight(), matrix, true);
+        } else {
+            matrix.preScale(1,1);
+            matrix.postRotate(270);
+            resizedBitmap = Bitmap.createBitmap(bitmap, 0, 0,
+                    bitmap.getWidth(), bitmap.getHeight(), matrix, true);
+        }
+
+        return new BitmapDrawable(a.getResources(), resizedBitmap);
 
     }
 
@@ -55,4 +90,5 @@ public class PictureUtils {
         b.getBitmap().recycle();
         imageView.setImageDrawable(null);
     }
+
 }

@@ -11,6 +11,7 @@
     <string name="hide_subtitle">Hide Subtitle</string>
     <string name="subtitle">If you see something, say something.</string>
     <string name="delete_crime">Delete</string>
+    <string name="delete_photo">Delete Photo</string>
     <string name="empty_hint">没有数据</string>
     <string name="new_crime_button">创建</string>
     <string name="take">Take!</string>

@@ -1677,6 +1677,7 @@ containing a value of this type.
         public static final int list_item=0x7f0c0029;
         public static final int media_actions=0x7f0c0063;
         public static final int menu_item_delete_crime=0x7f0c006d;
+        public static final int menu_item_delete_photo=0x7f0c0070;
         public static final int menu_item_new_crime=0x7f0c006e;
         public static final int menu_item_show_subtitle=0x7f0c006f;
         public static final int middle=0x7f0c001c;
@@ -1784,6 +1785,7 @@ containing a value of this type.
     public static final class menu {
         public static final int crime_list_item_context=0x7f0d0000;
         public static final int fragment_crime_list=0x7f0d0001;
+        public static final int photo_item_context=0x7f0d0002;
     }
     public static final class mipmap {
         public static final int ic_launcher=0x7f030000;
@@ -1816,14 +1818,15 @@ containing a value of this type.
         public static final int crimes_title=0x7f060019;
         public static final int date_picker_title=0x7f06001a;
         public static final int delete_crime=0x7f06001b;
-        public static final int empty_hint=0x7f06001c;
-        public static final int hide_subtitle=0x7f06001d;
-        public static final int new_crime=0x7f06001e;
-        public static final int new_crime_button=0x7f06001f;
-        public static final int show_subtitle=0x7f060020;
+        public static final int delete_photo=0x7f06001c;
+        public static final int empty_hint=0x7f06001d;
+        public static final int hide_subtitle=0x7f06001e;
+        public static final int new_crime=0x7f06001f;
+        public static final int new_crime_button=0x7f060020;
+        public static final int show_subtitle=0x7f060021;
         public static final int status_bar_notification_info_overflow=0x7f060013;
-        public static final int subtitle=0x7f060021;
-        public static final int take=0x7f060022;
+        public static final int subtitle=0x7f060022;
+        public static final int take=0x7f060023;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f090086;
