@@ -62,6 +62,7 @@ public class CrimeFragment extends Fragment {
     private ImageButton mPhotoButton;
     private Button mSuspectButton;
     private Button mReportButton;
+    private Button mCall;
     private ImageView mPhotoView;
 
     public static CrimeFragment newInstance(UUID crimeId){
@@ -181,7 +182,7 @@ public class CrimeFragment extends Fragment {
                 List<ResolveInfo> activities = pm.queryIntentActivities(i,0);
                 boolean isIntentSafe = activities.size() > 0;
                 if(isIntentSafe) {
-                    i = Intent.createChooser(i, getString(R.string.send_report));
+                    i = Intent.createChooser(i, getString(R.string.choose_app));
                     startActivityForResult(i, REQUEST_CONTACT);
                 }
             }
@@ -206,6 +207,22 @@ public class CrimeFragment extends Fragment {
                     i = Intent.createChooser(i, getString(R.string.send_report));
                     startActivity(i);
                 }
+            }
+        });
+
+        mCall = (Button)v.findViewById(R.id.suspect_phone);
+        mCall.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Uri phonenumber = Uri.parse("tel:" + mCrime.getPhoneNumber());
+                Intent i = new Intent(Intent.ACTION_DIAL,phonenumber);
+                PackageManager pm = getActivity().getPackageManager();
+                List<ResolveInfo> activities = pm.queryIntentActivities(i,0);
+                boolean isIntentSafe = activities.size() > 0;
+                if(isIntentSafe) {
+                    i = Intent.createChooser(i, getString(R.string.send_report));
+                    startActivity(i);
+                }
+
             }
         });
 
@@ -293,29 +310,29 @@ public class CrimeFragment extends Fragment {
             }
         } else if (requestCode == REQUEST_CONTACT) {
             Uri contactUri = data.getData();
-
-            //Specify which fields you want your query to return
-            //values for.
-            String[] queryFields = new String[] {
-                    ContactsContract.Contacts.DISPLAY_NAME
-            };
-            //Perform your query - the contactUri is like a "where"
-            //clause here
             Cursor c = getActivity().getContentResolver()
-                    .query(contactUri, queryFields, null, null, null);
-            //Double-check that you actually got results
+                    .query(contactUri, null, null, null, null);
+
             if(c.getCount() == 0) {
                 c.close();
                 return;
             }
 
-            //Pull out the first column of the first row of data -
-            //that is your suspect's name.
             c.moveToFirst();
-            String suspect = c.getString(0);
+            String suspect = c.getString(c.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME));
+
+            String id = c.getString(c.getColumnIndex(ContactsContract.Contacts._ID));
+            Cursor cNumber = getActivity().getContentResolver().query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI,
+                    new String[] {ContactsContract.CommonDataKinds.Phone.NUMBER},
+                    ContactsContract.CommonDataKinds.Phone.CONTACT_ID + "=" + id, null, null);
+            cNumber.moveToFirst();
+            String phonenumber = cNumber.getString(0);
+
             mCrime.setSuspect(suspect);
+            mCrime.setPhoneNumber(phonenumber);
             mSuspectButton.setText(suspect);
             c.close();
+            cNumber.close();
         }
     }
 
