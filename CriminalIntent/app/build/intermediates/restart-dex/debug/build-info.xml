@@ -4,46 +4,62 @@
     api-level="23"
     density="420dpi"
     format="7"
-    timestamp="9249731544082"
+    timestamp="19562906684447"
     token="-6630372660520755675"
     verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="319" />
+        duration="669" />
     <task
         name="instant-run-dex"
-        duration="426" />
+        duration="839" />
     <task
         name="instant-run-transform"
-        duration="24" />
+        duration="197" />
     <task
         name="verifier"
-        duration="9" />
+        duration="18" />
 
     <artifact
         location="G:\AndroidBackup\CriminalIntent\app\build\intermediates\reload-dex\debug\classes.dex"
         type="RELOAD_DEX" />
 
-    <build timestamp="6411468325108" >
+    <build timestamp="8377516839326" >
         <artifact
             location="G:\AndroidBackup\CriminalIntent\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
-    <build timestamp="8313933329039" >
-        <artifact
-            location="G:\AndroidBackup\CriminalIntent\app\build\intermediates\res\resources-debug.ap_"
-            type="RESOURCES" />
-    </build>
     <build
-        timestamp="9099949080570"
-        verifier="METHOD_ADDED" >
+        timestamp="17152525145823"
+        verifier="CLASS_ADDED" >
         <artifact
             location="G:\AndroidBackup\CriminalIntent\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_9\classes.dex"
             type="DEX" />
     </build>
     <build
-        timestamp="9249731544082"
+        timestamp="18170146061633"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="G:\AndroidBackup\CriminalIntent\app\build\intermediates\builds\debug\18170146061633\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="18197143669489"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="G:\AndroidBackup\CriminalIntent\app\build\intermediates\builds\debug\18197143669489\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="18367687435387"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="G:\AndroidBackup\CriminalIntent\app\build\intermediates\builds\debug\18367687435387\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="19562906684447"
         verifier="COMPATIBLE" >
         <artifact
             location="G:\AndroidBackup\CriminalIntent\app\build\intermediates\reload-dex\debug\classes.dex"
