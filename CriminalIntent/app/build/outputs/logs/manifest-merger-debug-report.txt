@@ -29,7 +29,7 @@ MERGED from [com.android.support:support-v4:23.3.0] G:\AndroidBackup\CriminalInt
 	android:allowBackup
 		ADDED from G:\AndroidBackup\CriminalIntent\app\src\main\AndroidManifest.xml:6:9-35
 	android:icon
-		ADDED from G:\AndroidBackup\CriminalIntent\app\src\main\AndroidManifest.xml:7:9-43
+		ADDED from G:\AndroidBackup\CriminalIntent\app\src\main\AndroidManifest.xml:7:9-40
 	android:theme
 		ADDED from G:\AndroidBackup\CriminalIntent\app\src\main\AndroidManifest.xml:10:9-40
 activity#com.wanbenyu.criminalintent.CrimeListActivity

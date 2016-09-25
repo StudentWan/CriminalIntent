@@ -621,6 +621,7 @@ int menu crime_list_item_context 0x7f0d0000
 int menu fragment_crime_list 0x7f0d0001
 int menu photo_item_context 0x7f0d0002
 int mipmap ic_launcher 0x7f030000
+int mipmap launcher 0x7f030001
 int string abc_action_bar_home_description 0x7f060000
 int string abc_action_bar_home_description_format 0x7f060001
 int string abc_action_bar_home_subtitle_description_format 0x7f060002

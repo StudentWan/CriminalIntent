@@ -313,21 +313,15 @@ public class CrimeFragment extends Fragment {
             Cursor c = getActivity().getContentResolver()
                     .query(contactUri, null, null, null, null);
 
-            if(c.getCount() == 0) {
-                c.close();
-                return;
-            }
-
             c.moveToFirst();
             String suspect = c.getString(c.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME));
-
             String id = c.getString(c.getColumnIndex(ContactsContract.Contacts._ID));
             Cursor cNumber = getActivity().getContentResolver().query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI,
                     new String[] {ContactsContract.CommonDataKinds.Phone.NUMBER},
                     ContactsContract.CommonDataKinds.Phone.CONTACT_ID + "=" + id, null, null);
             cNumber.moveToFirst();
-            String phonenumber = cNumber.getString(0);
 
+            String phonenumber = cNumber.getString(cNumber.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
             mCrime.setSuspect(suspect);
             mCrime.setPhoneNumber(phonenumber);
             mSuspectButton.setText(suspect);
